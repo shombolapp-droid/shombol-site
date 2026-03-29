@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সম্বল | Shombol — আপনার কষ্টের টাকার সম্বল</title>
+  <meta name="description" content="Shombol helps 8.7 million Bangladeshis abroad invest their hard-earned money safely back home. Compare USDIB, Sanchayapatra, WEDB and more.">
+  <meta name="keywords" content="NRB investment, Bangladesh investment, USDIB, Sanchayapatra, probashi, diaspora investment, সঞ্চয়পত্র, প্রবাসী বিনিয়োগ">
+  <meta property="og:title" content="সম্বল | Shombol — Your Hard-Earned Money's Safe Haven">
+  <meta property="og:description" content="Compare and invest in Bangladesh's safest investment options. Built for 8.7 million Bangladeshis abroad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shombol.app">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1B6B50">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: { 50:'#E6F2ED', 100:'#C0DFD2', 500:'#1B6B50', 600:'#155A43', 700:'#0E4434', 800:'#0A3328', 900:'#071F18' },
+            gold: { 50:'#FDF6E3', 100:'#FAECC7', 500:'#B8860B', 600:'#9A710A', 700:'#7C5B08' },
+            warm: { 50:'#FAF9F6', 100:'#F5F0E8', 200:'#EDE5D8' },
+          },
+          fontFamily: {
+            sans: ['Nunito', 'Noto Sans Bengali', 'sans-serif'],
+            bangla: ['Noto Sans Bengali', 'Nunito', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-gradient { background: linear-gradient(155deg, #0E4434 0%, #1B6B50 45%, #1E8060 100%); }
+    .gold-glow { box-shadow: 0 4px 24px rgba(184,134,11,0.15); }
+    .card-hover { transition: all 0.2s ease; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .safe-badge { background: #E6F2ED; color: #1B6B50; }
+    .mid-badge { background: #FDF6E3; color: #B8860B; }
+    .risk-badge { background: #FDF0EE; color: #B53A2E; }
+    input[type="range"] { -webkit-appearance: none; width: 100%; height: 6px; border-radius: 3px; background: #E5E2DB; outline: none; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #1B6B50; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+    .fade-in { animation: fadeIn 0.6s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+  </style>
+</head>
+<body class="bg-warm-50 font-sans text-gray-900 antialiased">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-white text-lg">🏦</div>
+        <div>
+          <span class="font-black text-emerald-500 text-lg tracking-tight">সম্বল</span>
+          <span class="text-gray-400 text-xs ml-1 hidden sm:inline">SHOMBOL</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-600">
+        <a href="#compare" class="hover:text-emerald-500 transition">তুলনা</a>
+        <a href="#calculator" class="hover:text-emerald-500 transition">ক্যালকুলেটর</a>
+        <a href="#guides" class="hover:text-emerald-500 transition">গাইড</a>
+        <a href="#about" class="hover:text-emerald-500 transition">আমাদের সম্পর্কে</a>
+      </div>
+      <a href="#newsletter" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition">
+        শুরু করুন
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-gradient pt-28 pb-20 px-4 sm:px-6 text-white relative overflow-hidden">
+    <div class="absolute top-[-60px] right-[-60px] w-[200px] h-[200px] rounded-full bg-white/[0.03]"></div>
+    <div class="absolute bottom-[-80px] left-[-40px] w-[250px] h-[250px] rounded-full bg-white/[0.02]"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-sm font-semibold mb-6 backdrop-blur-sm border border-white/10">
+        🇧🇩 ৮.৭ মিলিয়ন প্রবাসী বাংলাদেশির জন্য
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-4 tracking-tight">
+        আপনার কষ্টের টাকার<br>
+        <span class="text-gold-100">সম্বল</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-4 font-medium leading-relaxed">
+        নিরাপদে দেশে বিনিয়োগ করুন। USDIB, সঞ্চয়পত্র, বন্ড — সব তুলনা করুন এক জায়গায়।
+      </p>
+      <p class="text-sm text-white/50 mb-8 italic">
+        Your hard-earned money's safe haven. Compare & invest in Bangladesh's safest options.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#calculator" class="bg-white text-emerald-700 px-8 py-3.5 rounded-2xl font-bold text-base hover:bg-gray-50 transition shadow-lg">
+          🧮 রিটার্ন ক্যালকুলেটর
+        </a>
+        <a href="#compare" class="bg-white/15 backdrop-blur-sm text-white px-8 py-3.5 rounded-2xl font-bold text-base hover:bg-white/25 transition border border-white/20">
+          📊 বিনিয়োগ তুলনা করুন
+        </a>
+      </div>
+      <!-- Trust stats -->
+      <div class="mt-12 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+        <div class="bg-white/10 rounded-2xl p-3 backdrop-blur-sm">
+          <div class="text-2xl font-black">$30B+</div>
+          <div class="text-xs text-white/60 mt-1">বার্ষিক রেমিটেন্স</div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-3 backdrop-blur-sm">
+          <div class="text-2xl font-black">৮.৭M</div>
+          <div class="text-xs text-white/60 mt-1">প্রবাসী বাংলাদেশি</div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-3 backdrop-blur-sm">
+          <div class="text-2xl font-black">🛡️</div>
+          <div class="text-xs text-white/60 mt-1">সরকারি গ্যারান্টি</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TODAY'S RATES ===== -->
+  <section class="py-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2">আজকের সেরা রেট 📡</h2>
+        <p class="text-gray-500 text-sm">সরকারি গ্যারান্টিযুক্ত বিনিয়োগ অপশন</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <div class="font-bold text-base">🇺🇸 US Dollar Investment Bond</div>
+              <div class="text-xs text-gray-400 mt-0.5">USDIB — ডলারে রিটার্ন</div>
+            </div>
+            <span class="safe-badge px-2.5 py-1 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span>
+          </div>
+          <div class="text-3xl font-black text-emerald-500">6.50%</div>
+          <div class="text-xs text-gray-400 mt-1">USD · ৩ বছর · করমুক্ত · ডলারে ফেরত</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <div class="font-bold text-base">📋 ৫-বছর সঞ্চয়পত্র</div>
+              <div class="text-xs text-gray-400 mt-0.5">Bangladesh Sanchayapatra</div>
+            </div>
+            <span class="safe-badge px-2.5 py-1 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span>
+          </div>
+          <div class="text-3xl font-black text-emerald-500">11.83%</div>
+          <div class="text-xs text-gray-400 mt-1">BDT · ৫ বছর · সরকারি গ্যারান্টি</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <div class="font-bold text-base">👨‍👩‍👧 পরিবার সঞ্চয়পত্র</div>
+              <div class="text-xs text-gray-400 mt-0.5">মাসিক মুনাফা পান</div>
+            </div>
+            <span class="safe-badge px-2.5 py-1 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span>
+          </div>
+          <div class="text-3xl font-black text-emerald-500">11.93%</div>
+          <div class="text-xs text-gray-400 mt-1">BDT · ৫ বছর · প্রতি মাসে মুনাফা</div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm">
+          <div class="flex justify-between items-start mb-3">
+            <div>
+              <div class="font-bold text-base">🏦 ওয়েজ আর্নার বন্ড</div>
+              <div class="text-xs text-gray-400 mt-0.5">WEDB — করমুক্ত</div>
+            </div>
+            <span class="safe-badge px-2.5 py-1 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span>
+          </div>
+          <div class="text-3xl font-black text-emerald-500">12.00%</div>
+          <div class="text-xs text-gray-400 mt-1">BDT · ৫ বছর · সম্পূর্ণ করমুক্ত</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPARISON ===== -->
+  <section id="compare" class="py-16 px-4 sm:px-6 bg-warm-100">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2">সব বিনিয়োগ — এক নজরে 📊</h2>
+        <p class="text-gray-500 text-sm">নিরাপত্তা অনুযায়ী সাজানো। আপনার কষ্টের টাকা, সঠিক জায়গায়।</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <thead>
+            <tr class="bg-emerald-500 text-white text-sm">
+              <th class="text-left p-4 font-bold">বিনিয়োগ</th>
+              <th class="text-center p-4 font-bold">রিটার্ন</th>
+              <th class="text-center p-4 font-bold">মুদ্রা</th>
+              <th class="text-center p-4 font-bold">মেয়াদ</th>
+              <th class="text-center p-4 font-bold">করমুক্ত?</th>
+              <th class="text-center p-4 font-bold">ডলারে ফেরত?</th>
+              <th class="text-center p-4 font-bold">নিরাপত্তা</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="border-b border-gray-50 hover:bg-emerald-50/30">
+              <td class="p-4 font-bold">US Dollar Investment Bond</td>
+              <td class="p-4 text-center text-emerald-500 font-black text-lg">6.50%</td>
+              <td class="p-4 text-center">USD 💵</td>
+              <td class="p-4 text-center">৩ বছর</td>
+              <td class="p-4 text-center">✅</td>
+              <td class="p-4 text-center">✅ পুরোটা</td>
+              <td class="p-4 text-center"><span class="safe-badge px-2 py-0.5 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span></td>
+            </tr>
+            <tr class="border-b border-gray-50 hover:bg-emerald-50/30 bg-warm-50">
+              <td class="p-4 font-bold">৫-বছর সঞ্চয়পত্র</td>
+              <td class="p-4 text-center text-emerald-500 font-black text-lg">11.83%</td>
+              <td class="p-4 text-center">BDT ৳</td>
+              <td class="p-4 text-center">৫ বছর</td>
+              <td class="p-4 text-center">10% উৎসে</td>
+              <td class="p-4 text-center">❌ টাকায়</td>
+              <td class="p-4 text-center"><span class="safe-badge px-2 py-0.5 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span></td>
+            </tr>
+            <tr class="border-b border-gray-50 hover:bg-emerald-50/30">
+              <td class="p-4 font-bold">পরিবার সঞ্চয়পত্র</td>
+              <td class="p-4 text-center text-emerald-500 font-black text-lg">11.93%</td>
+              <td class="p-4 text-center">BDT ৳</td>
+              <td class="p-4 text-center">৫ বছর</td>
+              <td class="p-4 text-center">10% উৎসে</td>
+              <td class="p-4 text-center">❌ টাকায়</td>
+              <td class="p-4 text-center"><span class="safe-badge px-2 py-0.5 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span></td>
+            </tr>
+            <tr class="border-b border-gray-50 hover:bg-emerald-50/30 bg-warm-50">
+              <td class="p-4 font-bold">ওয়েজ আর্নার বন্ড (WEDB)</td>
+              <td class="p-4 text-center text-emerald-500 font-black text-lg">12.00%</td>
+              <td class="p-4 text-center">BDT ৳</td>
+              <td class="p-4 text-center">৫ বছর</td>
+              <td class="p-4 text-center">✅</td>
+              <td class="p-4 text-center">⚠️ মূলধন</td>
+              <td class="p-4 text-center"><span class="safe-badge px-2 py-0.5 rounded-full text-xs font-bold">🛡️ সুরক্ষিত</span></td>
+            </tr>
+            <tr class="border-b border-gray-50 hover:bg-yellow-50/30">
+              <td class="p-4 font-bold">ব্যাংক FD (সেরা)</td>
+              <td class="p-4 text-center text-gold-500 font-black text-lg">8-10%</td>
+              <td class="p-4 text-center">BDT ৳</td>
+              <td class="p-4 text-center">১-৩ বছর</td>
+              <td class="p-4 text-center">কর প্রযোজ্য</td>
+              <td class="p-4 text-center">❌</td>
+              <td class="p-4 text-center"><span class="mid-badge px-2 py-0.5 rounded-full text-xs font-bold">⚖️ মাঝারি</span></td>
+            </tr>
+            <tr class="hover:bg-red-50/30 bg-warm-50">
+              <td class="p-4 font-bold">ঢাকা স্টক এক্সচেঞ্জ (DSE)</td>
+              <td class="p-4 text-center text-red-500 font-black text-lg">???</td>
+              <td class="p-4 text-center">BDT ৳</td>
+              <td class="p-4 text-center">পরিবর্তনশীল</td>
+              <td class="p-4 text-center">মূলধন লাভ কর</td>
+              <td class="p-4 text-center">⚠️ NITA</td>
+              <td class="p-4 text-center"><span class="risk-badge px-2 py-0.5 rounded-full text-xs font-bold">⚠️ ঝুঁকিপূর্ণ</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-4 bg-red-50 border border-red-100 rounded-xl p-4 text-sm text-red-700">
+        ⚠️ <strong>সতর্কতা:</strong> DSE তে ভেতরের তথ্যে কারসাজি ও বড় ধসের ইতিহাস আছে। কষ্টের টাকা দিয়ে শেয়ার বাজারে ঝুঁকি নেবেন না — আগে নিরাপদ বিনিয়োগে ভিত্তি তৈরি করুন।
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CALCULATOR ===== -->
+  <section id="calculator" class="py-16 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2">রিটার্ন ক্যালকুলেটর 🧮</h2>
+        <p class="text-gray-500 text-sm">দেখুন আপনার টাকা কত হবে</p>
+      </div>
+      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
+        <!-- Product selector -->
+        <div class="mb-6">
+          <label class="text-sm font-bold text-gray-600 mb-3 block">প্রোডাক্ট বাছুন</label>
+          <div class="flex flex-wrap gap-2" id="productBtns">
+            <button onclick="selectProduct('usdib')" class="prod-btn active px-4 py-2.5 rounded-xl text-sm font-bold transition" data-prod="usdib">USDIB (6.5%)</button>
+            <button onclick="selectProduct('s5')" class="prod-btn px-4 py-2.5 rounded-xl text-sm font-bold transition" data-prod="s5">সঞ্চয়পত্র (11.83%)</button>
+            <button onclick="selectProduct('paribar')" class="prod-btn px-4 py-2.5 rounded-xl text-sm font-bold transition" data-prod="paribar">পরিবার (11.93%)</button>
+            <button onclick="selectProduct('wedb')" class="prod-btn px-4 py-2.5 rounded-xl text-sm font-bold transition" data-prod="wedb">WEDB (12%)</button>
+          </div>
+        </div>
+        <!-- Amount slider -->
+        <div class="mb-8">
+          <div class="flex justify-between items-center mb-3">
+            <label class="text-sm font-bold text-gray-600">বিনিয়োগের পরিমাণ</label>
+            <span id="amountDisplay" class="text-xl font-black text-emerald-500">$5,000</span>
+          </div>
+          <input type="range" id="amountSlider" min="500" max="100000" step="500" value="5000" oninput="calculate()">
+          <div class="flex justify-between text-xs text-gray-400 mt-1">
+            <span id="minLabel">$500</span>
+            <span id="maxLabel">$100,000</span>
+          </div>
+        </div>
+        <!-- Result -->
+        <div class="hero-gradient rounded-2xl p-6 sm:p-8 text-white mb-6">
+          <div class="text-sm text-white/70 mb-1" id="yearsLabel">৩ বছর পর আপনি পাবেন</div>
+          <div class="text-4xl sm:text-5xl font-black mb-4" id="totalResult">$6,039</div>
+          <div class="grid grid-cols-3 gap-4">
+            <div>
+              <div class="text-xs text-white/50">মূলধন</div>
+              <div class="text-lg font-bold" id="principalDisplay">$5,000</div>
+            </div>
+            <div>
+              <div class="text-xs text-white/50">মুনাফা</div>
+              <div class="text-lg font-bold text-green-300" id="profitDisplay">+$1,039</div>
+            </div>
+            <div>
+              <div class="text-xs text-white/50">বার্ষিক হার</div>
+              <div class="text-lg font-bold" id="rateDisplay">6.50%</div>
+            </div>
+          </div>
+        </div>
+        <!-- Comparison -->
+        <div class="bg-gold-50 border border-gold-100 rounded-xl p-4 text-sm text-gray-700">
+          💡 <strong>তুলনা:</strong> ব্যাংক FD (8%) তে রাখলে পেতেন <span id="fdResult">$5,000</span>।
+          <strong class="text-emerald-500">Shombol এ <span id="diffResult">$0</span> বেশি!</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SAFE INVESTMENT LADDER ===== -->
+  <section class="py-16 px-4 sm:px-6 bg-emerald-500 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-black mb-3">🛡️ নিরাপদ বিনিয়োগের সিঁড়ি</h2>
+      <p class="text-white/70 text-sm mb-10">The Safe Investment Ladder — প্রতিটি প্রবাসীর জন্য</p>
+      <div class="grid sm:grid-cols-4 gap-4">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/10">
+          <div class="text-3xl mb-3">1️⃣</div>
+          <div class="font-bold text-lg mb-1">USDIB</div>
+          <div class="text-sm text-white/70">প্রথম $500-$50,000 ডলারে রাখুন। সবচেয়ে নিরাপদ।</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/10">
+          <div class="text-3xl mb-3">2️⃣</div>
+          <div class="font-bold text-lg mb-1">সঞ্চয়পত্র</div>
+          <div class="text-sm text-white/70">পরিবার দিয়ে কিনুন। ৳৭.৫ লাখ পর্যন্ত ১১.৮৩%।</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/10">
+          <div class="text-3xl mb-3">3️⃣</div>
+          <div class="font-bold text-lg mb-1">WEDB</div>
+          <div class="text-sm text-white/70">করমুক্ত + ১২% রিটার্ন। সরকারি গ্যারান্টি।</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/10">
+          <div class="text-3xl mb-3">4️⃣</div>
+          <div class="font-bold text-lg mb-1">মিউচুয়াল ফান্ড</div>
+          <div class="text-sm text-white/70">শুধু উপরের ৩টি সম্পূর্ণ হলে। ICB ফান্ড দিয়ে শুরু।</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUIDES ===== -->
+  <section id="guides" class="py-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2">ধাপে ধাপে গাইড 📖</h2>
+        <p class="text-gray-500 text-sm">আপনার দেশ থেকে কীভাবে বিনিয়োগ করবেন — সম্পূর্ণ নির্দেশনা</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="#" class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm block">
+          <div class="text-sm font-bold text-emerald-500 mb-2">🇸🇦 সৌদি আরব থেকে</div>
+          <div class="font-bold text-base mb-1">সৌদি থেকে USDIB কেনার সম্পূর্ণ গাইড</div>
+          <div class="text-xs text-gray-400">৫ মিনিট পড়তে · Al Rajhi, FC Account, ধাপে ধাপে</div>
+        </a>
+        <a href="#" class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm block">
+          <div class="text-sm font-bold text-emerald-500 mb-2">📝 সাধারণ গাইড</div>
+          <div class="font-bold text-base mb-1">সঞ্চয়পত্র কিনবেন কীভাবে? সম্পূর্ণ গাইড</div>
+          <div class="text-xs text-gray-400">৭ মিনিট পড়তে · eTIN, ডকুমেন্ট, ব্যাংক</div>
+        </a>
+        <a href="#" class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm block">
+          <div class="text-sm font-bold text-emerald-500 mb-2">🇦🇪 UAE থেকে</div>
+          <div class="font-bold text-base mb-1">দুবাই থেকে NRB বন্ড কেনার নিয়ম</div>
+          <div class="text-xs text-gray-400">৬ মিনিট পড়তে · Exchange House, FC Account</div>
+        </a>
+        <a href="#" class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm block">
+          <div class="text-sm font-bold text-red-500 mb-2">⚠️ সতর্কতা</div>
+          <div class="font-bold text-base mb-1">DSE তে বিনিয়োগ — সত্যিই কি নিরাপদ?</div>
+          <div class="text-xs text-gray-400">৪ মিনিট পড়তে · ঝুঁকি বিশ্লেষণ</div>
+        </a>
+        <a href="#" class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm block">
+          <div class="text-sm font-bold text-emerald-500 mb-2">🇩🇪 ইউরোপ থেকে</div>
+          <div class="font-bold text-base mb-1">জার্মানি/UK থেকে বিনিয়োগের সম্পূর্ণ গাইড</div>
+          <div class="text-xs text-gray-400">৬ মিনিট পড়তে · SEPA, HSBC, Standard Chartered</div>
+        </a>
+        <a href="#" class="bg-white rounded-2xl p-5 border border-gray-100 card-hover shadow-sm block">
+          <div class="text-sm font-bold text-emerald-500 mb-2">📚 বেসিক</div>
+          <div class="font-bold text-base mb-1">FC অ্যাকাউন্ট কী? কেন দরকার?</div>
+          <div class="text-xs text-gray-400">৫ মিনিট পড়তে · সব NRB বিনিয়োগের প্রথম ধাপ</div>
+        </a>
+      </div>
+      <div class="text-center mt-6">
+        <span class="text-sm text-gray-400">আরো গাইড শীঘ্রই আসছে — নিউজলেটারে সাবস্ক্রাইব করুন 👇</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section id="newsletter" class="py-16 px-4 sm:px-6 bg-warm-100">
+    <div class="max-w-xl mx-auto text-center">
+      <div class="text-4xl mb-4">📬</div>
+      <h2 class="text-2xl font-black text-gray-900 mb-2">Shombol নিউজলেটার</h2>
+      <p class="text-gray-500 text-sm mb-6">প্রতি সপ্তাহে সেরা রেট আপডেট, নতুন গাইড, এবং বিনিয়োগ টিপস পান। বিনামূল্যে।</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/shombol" method="post" target="_blank" class="flex flex-col sm:flex-row gap-3">
+        <input type="email" name="email" placeholder="আপনার ইমেইল দিন" required
+          class="flex-1 px-5 py-3.5 rounded-xl border border-gray-200 text-base focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20">
+        <button type="submit" class="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3.5 rounded-xl font-bold text-base transition whitespace-nowrap">
+          সাবস্ক্রাইব ➜
+        </button>
+      </form>
+      <p class="text-xs text-gray-400 mt-3">আমরা স্প্যাম করি না। যেকোনো সময় আনসাবস্ক্রাইব করতে পারবেন।</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="py-16 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl font-black text-gray-900 mb-4">Shombol কেন তৈরি হলো?</h2>
+      <div class="text-gray-600 leading-relaxed text-base space-y-4">
+        <p>আমি নিজেও একজন প্রবাসী — জার্মানিতে থাকি। জানি কষ্ট করে টাকা আয় করা কত কঠিন। আরো জানি সেই টাকা দেশে নিরাপদে রাখা কত জটিল।</p>
+        <p>USDIB কী, FC অ্যাকাউন্ট কীভাবে খুলতে হয়, সঞ্চয়পত্রের রেট কত — এসব তথ্য ছড়িয়ে আছে দশটা ব্যাংকের দশটা ওয়েবসাইটে, জটিল ভাষায়। কোনো একটা জায়গায় সব নেই।</p>
+        <p class="font-bold text-emerald-500">Shombol সেই একটা জায়গা। আপনার কষ্টের টাকার সম্বল।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col sm:flex-row justify-between items-start gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-sm">🏦</div>
+            <span class="font-black text-lg">সম্বল <span class="text-gray-500 text-sm font-normal">SHOMBOL</span></span>
+          </div>
+          <p class="text-gray-400 text-sm max-w-xs">আপনার কষ্টের টাকার সম্বল। ৮.৭ মিলিয়ন প্রবাসী বাংলাদেশির জন্য নিরাপদ বিনিয়োগ প্ল্যাটফর্ম।</p>
+        </div>
+        <div class="grid grid-cols-2 gap-8 text-sm">
+          <div>
+            <div class="font-bold text-gray-300 mb-3">বিনিয়োগ</div>
+            <div class="space-y-2 text-gray-500">
+              <a href="#" class="block hover:text-white transition">USDIB</a>
+              <a href="#" class="block hover:text-white transition">সঞ্চয়পত্র</a>
+              <a href="#" class="block hover:text-white transition">WEDB</a>
+              <a href="#" class="block hover:text-white transition">তুলনা</a>
+            </div>
+          </div>
+          <div>
+            <div class="font-bold text-gray-300 mb-3">গাইড</div>
+            <div class="space-y-2 text-gray-500">
+              <a href="#" class="block hover:text-white transition">🇸🇦 সৌদি থেকে</a>
+              <a href="#" class="block hover:text-white transition">🇦🇪 UAE থেকে</a>
+              <a href="#" class="block hover:text-white transition">🇩🇪 ইউরোপ থেকে</a>
+              <a href="#" class="block hover:text-white transition">FC অ্যাকাউন্ট</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+        <p>&copy; 2026 Shombol. সম্বল। All rights reserved.</p>
+        <div class="flex gap-4 mt-3 sm:mt-0">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+          <a href="#" class="hover:text-white transition">যোগাযোগ</a>
+        </div>
+      </div>
+      <div class="mt-6 text-xs text-gray-600 text-center leading-relaxed">
+        ⚠️ Shombol একটি শিক্ষামূলক প্ল্যাটফর্ম। আমরা আর্থিক পরামর্শদাতা নই। বিনিয়োগের আগে নিজে যাচাই করুন। সরকারি রেট পরিবর্তনশীল।
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CALCULATOR JS ===== -->
+  <script>
+    const products = {
+      usdib: { rate: 6.5, years: 3, currency: '$', name: 'USDIB' },
+      s5: { rate: 11.83, years: 5, currency: '৳', name: 'সঞ্চয়পত্র' },
+      paribar: { rate: 11.93, years: 5, currency: '৳', name: 'পরিবার' },
+      wedb: { rate: 12.0, years: 5, currency: '৳', name: 'WEDB' },
+    };
+    let currentProduct = 'usdib';
+
+    function selectProduct(prod) {
+      currentProduct = prod;
+      document.querySelectorAll('.prod-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.style.background = '#f5f5f2';
+        btn.style.color = '#4A4A4A';
+        btn.style.border = '1px solid #E5E2DB';
+      });
+      const activeBtn = document.querySelector(`[data-prod="${prod}"]`);
+      activeBtn.classList.add('active');
+      activeBtn.style.background = '#1B6B50';
+      activeBtn.style.color = '#fff';
+      activeBtn.style.border = '1px solid #1B6B50';
+      calculate();
+    }
+
+    function calculate() {
+      const p = products[currentProduct];
+      const amount = parseInt(document.getElementById('amountSlider').value);
+      const total = amount * Math.pow(1 + p.rate / 100, p.years);
+      const profit = total - amount;
+      const fdTotal = amount * Math.pow(1.08, p.years);
+      const diff = total - fdTotal;
+
+      const fmt = (n) => p.currency + Math.round(n).toLocaleString();
+
+      document.getElementById('amountDisplay').textContent = fmt(amount);
+      document.getElementById('yearsLabel').textContent = p.years + ' বছর পর আপনি পাবেন';
+      document.getElementById('totalResult').textContent = fmt(total);
+      document.getElementById('principalDisplay').textContent = fmt(amount);
+      document.getElementById('profitDisplay').textContent = '+' + fmt(profit);
+      document.getElementById('rateDisplay').textContent = p.rate + '%';
+      document.getElementById('fdResult').textContent = fmt(fdTotal);
+      document.getElementById('diffResult').textContent = fmt(diff);
+      document.getElementById('minLabel').textContent = p.currency + '500';
+      document.getElementById('maxLabel').textContent = p.currency + '100,000';
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      selectProduct('usdib');
+    });
+  </script>
+
+</body>
+</html>
