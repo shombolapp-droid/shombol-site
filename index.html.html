@@ -305,7 +305,8 @@
     .step .amt { margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--emerald-700); }
 
     /* GUIDES */
-    .guides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    .guides { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+    .guides details.g.pair-open { align-self: start; }
     details.g { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow-sm); transition: box-shadow .3s, border-color .3s; }
     details.g[open] { box-shadow: var(--shadow); border-color: #D9D0BB; }
     details.g summary { list-style: none; cursor: pointer; padding: 22px 24px; display: flex; gap: 16px; align-items: flex-start; }
@@ -1332,6 +1333,17 @@
     } else {
       document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
     }
+
+    /* Guides: cards in a row share one height; once either card in a row is open,
+       both size to their own content so the closed one doesn't stretch into an empty box. */
+    var guides = Array.prototype.slice.call(document.querySelectorAll('.guides details.g'));
+    function syncGuides() {
+      guides.forEach(function (d, i) {
+        var p = guides[i ^ 1];
+        d.classList.toggle('pair-open', d.open || !!(p && p.open));
+      });
+    }
+    guides.forEach(function (d) { d.addEventListener('toggle', syncGuides); });
 
     $('newsForm').addEventListener('submit', function () {
       setTimeout(function () { $('newsFine').textContent = t('thanks'); }, 200);
