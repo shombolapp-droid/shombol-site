@@ -1,0 +1,13 @@
+{
+  "name": "সম্বল | Shombol",
+  "short_name": "Shombol",
+  "description": "প্রবাসী বাংলাদেশিদের জন্য নিরাপদ বিনিয়োগের রেট, তুলনা ও ক্যালকুলেটর",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F0",
+  "theme_color": "#0B3D2E",
+  "lang": "bn",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
