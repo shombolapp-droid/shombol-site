@@ -1,0 +1,23 @@
+:root { --ink:#0A1A14; --ink-2:#33433C; --muted:#6B7A73; --line:#E7E2D6; --ivory:#FAF7F0; --em:#0B3D2E; --em7:#14634B; --gold:#C9A34E; }
+*,*::before,*::after { box-sizing: border-box; }
+body { margin:0; background:var(--ivory); color:var(--ink); font-family:'Inter','Hind Siliguri',system-ui,sans-serif; font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; }
+a { color:var(--em7); text-underline-offset:3px; }
+.top { background:var(--em); color:#fff; }
+.top .in { max-width:820px; margin:0 auto; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.brand { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; font-family:'Noto Serif Bengali',serif; font-weight:700; font-size:20px; }
+.brand i { width:34px; height:34px; border-radius:10px; background:linear-gradient(145deg,#E3C77F,#C9A34E); display:grid; place-items:center; }
+.brand svg { width:19px; height:19px; }
+.top a.back { color:rgba(255,255,255,.8); font-size:14px; text-decoration:none; }
+.top a.back:hover { color:#fff; }
+main { max-width:820px; margin:0 auto; padding:48px 20px 80px; }
+h1 { font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:clamp(32px,5vw,44px); line-height:1.15; margin:0 0 8px; letter-spacing:-.02em; }
+.lead { color:var(--muted); margin:0 0 36px; }
+h2 { font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:22px; margin:36px 0 10px; }
+h3 { font-size:16px; margin:22px 0 6px; }
+p, ul { margin:0 0 12px; color:var(--ink-2); }
+ul { padding-left:20px; }
+.card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px 24px; margin:0 0 18px; }
+.lang-sep { margin:56px 0 0; padding-top:40px; border-top:1px solid var(--line); }
+.note { font-size:14px; color:var(--muted); }
+footer { text-align:center; font-size:13px; color:var(--muted); padding:0 20px 40px; }
+footer a { margin:0 8px; }
