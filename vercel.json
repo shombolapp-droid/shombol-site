@@ -75,6 +75,22 @@
     {
       "source": "/en/rates/:slug",
       "destination": "/en-rate-:slug.html"
+    },
+    {
+      "source": "/countries",
+      "destination": "/countries.html"
+    },
+    {
+      "source": "/en/countries",
+      "destination": "/en-countries.html"
+    },
+    {
+      "source": "/countries/:slug",
+      "destination": "/country-:slug.html"
+    },
+    {
+      "source": "/en/countries/:slug",
+      "destination": "/en-country-:slug.html"
     }
   ],
   "trailingSlash": false
