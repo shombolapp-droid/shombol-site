@@ -179,6 +179,15 @@
     .sources-list { font-size: var(--text-sm); }
     .sources-list li, .sources-list li p { font-size: var(--text-sm); color: var(--color-muted); }
 
+    /* share row: plain links, no third-party scripts */
+    .share { margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-rule-strong); }
+    .share-h { margin: 0 0 var(--space-sm); font-weight: 600; color: var(--color-ink); }
+    .share-btns { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+    .sbtn { display: inline-flex; align-items: center; min-height: 44px; padding-inline: var(--space-md); border-radius: var(--radius-pill); border: 1px solid var(--color-edge); background: transparent; color: var(--color-ink); font-size: var(--text-sm); font-weight: 600; cursor: pointer; text-decoration: none; transition: background-color var(--dur-short) var(--ease-out); }
+    .prose a.sbtn { color: var(--color-ink); text-decoration: none; }
+    .sbtn:hover { background: var(--color-paper-2); }
+    .sbtn:active { transform: translateY(1px); }
+    .share-status { margin: var(--space-xs) 0 0; font-size: var(--text-sm); color: var(--color-muted); min-height: 1lh; overflow-wrap: anywhere; }
     /* aside */
     .aside { position: sticky; top: calc(var(--nav-h) + var(--space-lg)); display: grid; gap: var(--space-lg); }
     .facts { background: var(--color-paper-2); border-radius: var(--radius-lg); padding: var(--space-lg); }

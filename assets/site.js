@@ -27,6 +27,24 @@
     a.addEventListener('click', function () { try { localStorage.setItem('shombol-lang', a.getAttribute('hreflang')); } catch (e) {} });
   });
   try { localStorage.setItem('shombol-lang', document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'bn'); } catch (e) {}
+  /* Share row: copy link and the phone's share sheet; the other buttons are plain links. */
+  document.querySelectorAll('.share').forEach(function (box) {
+    var base = box.getAttribute('data-share-url'), title = box.getAttribute('data-share-title');
+    var status = box.querySelector('.share-status');
+    var link = function (src) { return base + '?utm_source=' + src + '&utm_medium=share'; };
+    var copy = box.querySelector('[data-share-copy]');
+    if (copy) copy.addEventListener('click', function () {
+      var url = link('copy');
+      var done = function () { status.textContent = copy.getAttribute('data-copied'); };
+      var manual = function () { status.textContent = copy.getAttribute('data-fail') + url; };
+      try { navigator.clipboard.writeText(title + ' ' + url).then(done, manual); } catch (e) { manual(); }
+    });
+    var nat = box.querySelector('[data-share-native]');
+    if (nat && navigator.share) {
+      nat.hidden = false;
+      nat.addEventListener('click', function () { navigator.share({ title: title, url: link('share') }).catch(function () {}); });
+    }
+  });
   var yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
 })();
