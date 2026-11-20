@@ -313,6 +313,13 @@
     .bar .b2 { background: var(--color-on-field-muted); }
     .out-note { margin-top: var(--space-lg); padding: var(--space-md); border-radius: var(--radius); background: var(--color-field-deep); font-size: var(--text-sm); color: var(--color-on-field-muted); line-height: 1.6; }
     .out-note b { color: var(--color-on-field); }
+    .share-calc { margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--color-on-field-rule); }
+    .share-calc-h { margin: 0 0 var(--space-sm); font-size: var(--text-sm); color: var(--color-on-field-muted); }
+    .share-btns { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+    .sbtn { display: inline-flex; align-items: center; min-height: 44px; padding-inline: var(--space-md); border-radius: var(--radius-pill); border: 1px solid var(--color-edge-on-field); background: transparent; color: var(--color-on-field); font-size: var(--text-sm); font-weight: 600; cursor: pointer; transition: background-color var(--dur-short) var(--ease-out); }
+    .sbtn:hover { background: var(--color-field-deep); }
+    .sbtn:active { transform: translateY(1px); }
+    .share-status { margin: var(--space-xs) 0 0; font-size: var(--text-xs); color: var(--color-on-field-muted); min-height: 1lh; overflow-wrap: anywhere; }
     .calc-foot { font-size: var(--text-sm); color: var(--color-muted); margin: var(--space-xl) 0 0; max-width: 75ch; }
 
     /* ladder: a real ordered list */
@@ -874,6 +881,16 @@
             </div>
           </div>
           <div class="out-note" id="outNote"></div>
+          <div class="share-calc">
+            <p class="share-calc-h" data-en="Share this result with your family">এই হিসাব পরিবারের সাথে শেয়ার করুন</p>
+            <div class="share-btns">
+              <a class="sbtn" id="shWa" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="sbtn" id="shFb" href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener">Facebook</a>
+              <button type="button" class="sbtn" id="shCopy" data-en="Copy link">লিংক কপি</button>
+              <button type="button" class="sbtn" id="shNative" hidden data-en="Share">শেয়ার</button>
+            </div>
+            <p class="share-status" id="shStatus" role="status" aria-live="polite"></p>
+          </div>
         </div>
       </div>
       <p class="calc-foot" data-en="This is an estimate for learning purposes. It uses simple profit as the government does; the actual amount from your bank or the National Savings Directorate may differ slightly.">হিসাবটি আনুমানিক ও শিক্ষামূলক। সরকারি নিয়মে সরল মুনাফা ধরা হয়েছে; প্রকৃত অর্থ ব্যাংক বা জাতীয় সঞ্চয় অধিদপ্তরের হিসাব অনুযায়ী সামান্য ভিন্ন হতে পারে।</p>
@@ -1198,7 +1215,9 @@
         less: function (fd, d) { return 'এই হিসাবে ব্যাংক FDR (' + fd + '%) <b>' + d + '</b> বেশি দেয়, তবে FDR এ সরকারি গ্যারান্টি নেই।'; },
         usdNote: 'ডলারে রাখায় টাকার মান কমলেও আপনার সঞ্চয়ের মূল্য সুরক্ষিত থাকে।',
         lakh: ' লাখ', crore: ' কোটি',
-        thanks: 'ধন্যবাদ! নতুন ট্যাবে আপনার সাবস্ক্রিপশন নিশ্চিত করুন।'
+        thanks: 'ধন্যবাদ! নতুন ট্যাবে আপনার সাবস্ক্রিপশন নিশ্চিত করুন।',
+        shareMsg: function (n, a, y, tot) { return 'Shombol এ হিসাব করে দেখলাম: ' + n + ' এ ' + a + ' রাখলে ' + y + ' বছর পর মোট ' + tot + ' পাওয়া যাবে। আপনিও নিজের হিসাব দেখুন:'; },
+        copied: 'লিংক কপি হয়েছে। এখন WhatsApp বা যেকোনো জায়গায় পেস্ট করুন।', copyFail: 'এই লিংকটা কপি করে পাঠান: '
       },
       en: {
         tax: 'Show after the 10% advance tax at source', taxFree: 'This investment is tax-free',
@@ -1212,7 +1231,9 @@
         less: function (fd, d) { return 'Here a bank FDR (' + fd + '%) pays <b>' + d + '</b> more, but an FDR has no government guarantee.'; },
         usdNote: 'Holding dollars protects the value of your savings even if the taka weakens.',
         lakh: ' lakh', crore: ' crore',
-        thanks: 'Thank you! Please confirm your subscription in the new tab.'
+        thanks: 'Thank you! Please confirm your subscription in the new tab.',
+        shareMsg: function (n, a, y, tot) { return 'I checked on Shombol: ' + a + ' in the ' + n + ' grows to ' + tot + ' after ' + y + ' years. See your own numbers:'; },
+        copied: 'Link copied. Paste it into WhatsApp or anywhere you like.', copyFail: 'Copy this link to share it: '
       }
     };
 
@@ -1356,6 +1377,7 @@
       $('outNote').innerHTML = p.note[lang] + ' ' + cmp;
       range.value = Math.min(Math.max(amt, p.min), p.max);
       setFill();
+      refreshShare();
     }
 
     amountInput.addEventListener('input', function () {
@@ -1404,9 +1426,54 @@
       b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang'), true); });
     });
 
+    /* ---------- Shared results: ?p=wedb&a=1000000&fx=122&fd=9.5&tax=1 ---------- */
+    function readParams() {
+      try {
+        var q = new URLSearchParams(location.search);
+        var pk = q.get('p');
+        if (pk && Object.prototype.hasOwnProperty.call(P, pk)) current = pk;
+        var p = P[current], a = parseInt(q.get('a'), 10);
+        var fx = parseFloat(q.get('fx')), fd = parseFloat(q.get('fd'));
+        if (!isNaN(fx) && fx >= 50 && fx <= 300) fxInput.value = fx;
+        if (!isNaN(fd) && fd >= 1 && fd <= 20) fdInput.value = fd;
+        if (q.get('tax') === '0') taxToggle.checked = false;
+        return (!isNaN(a) && a >= p.min && a <= p.max) ? a : p.def;
+      } catch (e) { return P[current].def; }
+    }
+    function shareUrl(src) {
+      var p = P[current], q = new URLSearchParams(), a = parseAmt(amountInput.value);
+      q.set('p', current); q.set('a', String(a >= p.min && a <= p.max ? a : p.def));
+      q.set('fx', fxInput.value); q.set('fd', fdInput.value); q.set('tax', taxToggle.checked ? '1' : '0');
+      if (lang === 'en') q.set('lang', 'en');
+      q.set('utm_source', src); q.set('utm_medium', 'share'); q.set('utm_campaign', 'calculator');
+      return 'https://shombol.app/?' + q.toString() + '#calculator';
+    }
+    function shareText() {
+      var p = P[current];
+      return t('shareMsg')(p.name[lang], fmt(parseAmt(amountInput.value), p.cur), p.years, $('outTotal').textContent);
+    }
+    function refreshShare() {
+      $('shWa').href = 'https://wa.me/?text=' + encodeURIComponent(shareText() + ' ' + shareUrl('whatsapp'));
+      $('shFb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl('facebook'));
+      $('shStatus').textContent = '';
+    }
+    $('shCopy').addEventListener('click', function () {
+      var text = shareText() + ' ' + shareUrl('copy');
+      var done = function () { $('shStatus').textContent = t('copied'); };
+      var manual = function () { $('shStatus').textContent = t('copyFail') + shareUrl('copy'); };
+      try { navigator.clipboard.writeText(text).then(done, manual); } catch (e) { manual(); }
+    });
+    if (navigator.share) {
+      $('shNative').hidden = false;
+      $('shNative').addEventListener('click', function () {
+        navigator.share({ title: 'Shombol', text: shareText(), url: shareUrl('share') }).catch(function () {});
+      });
+    }
+
     /* initial render */
-    range.min = P[current].min; range.max = P[current].max; range.step = P[current].step; range.value = P[current].def;
-    amountInput.value = P[current].def.toLocaleString(loc(P[current]));
+    var startAmt = readParams();
+    range.min = P[current].min; range.max = P[current].max; range.step = P[current].step; range.value = startAmt;
+    amountInput.value = startAmt.toLocaleString(loc(P[current]));
     applyLang(lang, false);
 
     /* ---------- Nav, menu, reveal, back-to-top ---------- */
