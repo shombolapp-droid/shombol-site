@@ -206,6 +206,8 @@
     .guide-list .g-desc { display: block; font-size: var(--text-sm); color: var(--color-muted); margin-top: var(--space-2xs); }
     .guide-list .g-go { grid-column: 12; justify-self: end; font-size: var(--text-sm); font-weight: 600; color: var(--color-brand); white-space: nowrap; }
     .guide-list a:hover .g-title { color: var(--color-brand); }
+    .related.no-rule { border-top: 0; }
+    .next-review { margin: var(--space-xl) 0 0; font-size: var(--text-table); }
     .band { background: var(--color-field); color: var(--color-on-field); padding-block: var(--section-gap-s); }
     .band-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: center; }
     .band-text { grid-column: 1 / span 7; }
