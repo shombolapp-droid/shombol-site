@@ -53,7 +53,7 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "প্রবাসীরা কি সঞ্চয়পত্র কিনতে পারেন?", "acceptedAnswer": {"@type": "Answer", "text": "সাধারণ সঞ্চয়পত্র কিনতে বাংলাদেশের NID, TIN (৫ লাখ টাকার বেশি হলে) ও দেশি ব্যাংক অ্যাকাউন্ট লাগে। তাই অনেক প্রবাসী পরিবারের সদস্যের নামে কেনেন। প্রবাসীদের জন্য বিশেষভাবে তৈরি Wage Earner Development Bond, US Dollar Premium Bond ও US Dollar Investment Bond সরাসরি পাসপোর্ট দিয়ে কেনা যায়।"}},
+      {"@type": "Question", "name": "প্রবাসীরা কি সঞ্চয়পত্র কিনতে পারেন?", "acceptedAnswer": {"@type": "Answer", "text": "সাধারণ সঞ্চয়পত্র কিনতে বাংলাদেশের NID ও দেশি ব্যাংক অ্যাকাউন্ট লাগে (১০ লাখ টাকার বেশি কিনলে আয়কর রিটার্নের প্রমাণও)। তাই অনেক প্রবাসী পরিবারের সদস্যের নামে কেনেন। প্রবাসীদের জন্য বিশেষভাবে তৈরি Wage Earner Development Bond, US Dollar Premium Bond ও US Dollar Investment Bond সরাসরি পাসপোর্ট দিয়ে কেনা যায়।"}},
       {"@type": "Question", "name": "US Dollar Premium Bond আর Investment Bond এর পার্থক্য কী?", "acceptedAnswer": {"@type": "Answer", "text": "দুটোই ৩ বছর মেয়াদি ও করমুক্ত। Premium Bond এ রেট বেশি (১ লাখ ডলার পর্যন্ত মেয়াদ শেষে ৭.৫%) কিন্তু মুনাফা টাকায় দেয়। Investment Bond এ রেট ৬.৫% কিন্তু মূলধন ও মুনাফা দুটোই ডলারে পাওয়া যায়।"}},
       {"@type": "Question", "name": "What is the Sanchayapatra profit rate in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Rates are unchanged for July to December 2026: 5-year Bangladesh Sanchayapatra 11.83%, Family (Paribar) 11.93%, 3-monthly profit 11.82%, Pensioner 11.98% (for investments up to 7.5 lakh taka)."}}
     ]
@@ -346,6 +346,8 @@
     .g-content li { margin-bottom: var(--space-xs); }
     .g-content li::marker { color: var(--color-accent-text); font-weight: 600; }
     .g-content p { margin: 0 0 var(--space-sm); }
+    .full-guide { margin: var(--space-md) 0 0; }
+    .all-guides { margin: var(--space-xl) 0 0; }
     .tip { margin-top: var(--space-md); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-sm); background: var(--color-accent-soft); color: var(--color-accent-ink); font-size: var(--text-sm); }
 
     /* faq: head held beside the questions */
@@ -660,7 +662,7 @@
           </ul>
           <ul class="plain rr-facts">
             <li data-en="5 years">৫ বছর</li>
-            <li data-en="Tax deducted at source">উৎসে কর কাটা হয়</li>
+            <li data-en="10% advance tax at source">উৎসে ১০% অগ্রিম কর</li>
             <li class="goldf" data-en="In a family member's name">পরিবারের নামে</li>
           </ul>
         </li>
@@ -677,7 +679,7 @@
           </ul>
           <ul class="plain rr-facts">
             <li data-en="5 years">৫ বছর</li>
-            <li data-en="Tax deducted at source">উৎসে কর কাটা হয়</li>
+            <li data-en="10% advance tax at source">উৎসে ১০% অগ্রিম কর</li>
           </ul>
         </li>
         <li class="rate-row">
@@ -693,7 +695,7 @@
           </ul>
           <ul class="plain rr-facts">
             <li data-en="3 years">৩ বছর</li>
-            <li data-en="Tax deducted at source">উৎসে কর কাটা হয়</li>
+            <li data-en="10% advance tax at source">উৎসে ১০% অগ্রিম কর</li>
           </ul>
         </li>
       </ol>
@@ -755,7 +757,7 @@
               <td data-l="রিটার্ন" data-en-l="Return"><span class="rate-cell num">11.93%</span></td>
               <td data-l="মুদ্রা" data-en-l="Currency" data-en="Taka ৳">টাকা ৳</td>
               <td data-l="মেয়াদ" data-en-l="Term" data-en="5 years">৫ বছর</td>
-              <td data-l="কর" data-en-l="Tax" data-en="Tax at source">উৎসে কর</td>
+              <td data-l="কর" data-en-l="Tax" data-en="10% advance tax">১০% অগ্রিম কর</td>
               <td data-l="বিদেশে ফেরত" data-en-l="Take abroad"><span class="no" data-en="No">না</span></td>
               <td data-l="কারা কিনবেন" data-en-l="Who can buy" data-en="Family in Bangladesh">দেশে থাকা পরিবার</td>
               <td data-l="নিরাপত্তা" data-en-l="Safety"><span class="pill safe" data-en="Highest">সর্বোচ্চ</span></td>
@@ -765,9 +767,9 @@
               <td data-l="রিটার্ন" data-en-l="Return"><span class="rate-cell num">11.83%</span></td>
               <td data-l="মুদ্রা" data-en-l="Currency" data-en="Taka ৳">টাকা ৳</td>
               <td data-l="মেয়াদ" data-en-l="Term" data-en="5 years">৫ বছর</td>
-              <td data-l="কর" data-en-l="Tax" data-en="Tax at source">উৎসে কর</td>
+              <td data-l="কর" data-en-l="Tax" data-en="10% advance tax">১০% অগ্রিম কর</td>
               <td data-l="বিদেশে ফেরত" data-en-l="Take abroad"><span class="no" data-en="No">না</span></td>
-              <td data-l="কারা কিনবেন" data-en-l="Who can buy" data-en="Anyone with NID and TIN">NID ও TIN আছে এমন</td>
+              <td data-l="কারা কিনবেন" data-en-l="Who can buy" data-en="Anyone with an NID">NID আছে এমন যে কেউ</td>
               <td data-l="নিরাপত্তা" data-en-l="Safety"><span class="pill safe" data-en="Highest">সর্বোচ্চ</span></td>
             </tr>
             <tr>
@@ -797,7 +799,7 @@
       <div class="notes reveal">
         <div class="note info">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-          <div data-en="&lt;b&gt;Remember:&lt;/b&gt; the rates above apply when held to maturity. Cashing in early gives a lower rate (for example, dollar bonds pay no profit if cashed within 1 year). Sanchayapatra usually has 10% tax deducted at source (5% for investments up to 5 lakh taka)."><b>মনে রাখুন:</b> উপরের রেটগুলো মেয়াদ পূর্ণ হলে প্রযোজ্য। মেয়াদের আগে ভাঙালে রেট কম হয় (যেমন ডলার বন্ড ১ বছরের আগে ভাঙালে কোনো মুনাফা নেই)। সঞ্চয়পত্রে সাধারণত উৎসে কর ১০% (৫ লাখ টাকা পর্যন্ত বিনিয়োগে ৫%)।</div>
+          <div data-en="&lt;b&gt;Remember:&lt;/b&gt; the rates above apply when held to maturity. Cashing in early gives a lower rate (for example, dollar bonds pay no profit if cashed within 1 year). From 1 July 2026, Sanchayapatra profit has 10% advance tax deducted at source; with a TIN and a tax return the extra can be refunded."><b>মনে রাখুন:</b> উপরের রেটগুলো মেয়াদ পূর্ণ হলে প্রযোজ্য। মেয়াদের আগে ভাঙালে রেট কম হয় (যেমন ডলার বন্ড ১ বছরের আগে ভাঙালে কোনো মুনাফা নেই)। ১ জুলাই ২০২৬ থেকে সঞ্চয়পত্রের মুনাফায় উৎসে ১০% অগ্রিম কর কাটা হয়; TIN নিয়ে রিটার্ন দিলে বাড়তি অংশ ফেরত পাওয়া যায়।</div>
         </div>
         <div class="note warn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9L2.4 17.5A2 2 0 004.1 20.5h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0zM12 9v4M12 17h.01"/></svg>
@@ -914,7 +916,7 @@
     <div class="container">
       <div class="head reveal">
         <h2 data-en="How to buy, in plain words">কীভাবে কিনবেন, সহজ ভাষায়</h2>
-        <p class="lead" data-en="Click any guide and the full instructions open right here.">যেকোনো গাইডে ক্লিক করুন, পুরো নির্দেশনা এখানেই খুলবে।</p>
+        <p class="lead" data-en="Open any guide for a quick summary, or read the full guide on its own page.">যেকোনো গাইড খুলে সংক্ষেপে দেখুন, অথবা আলাদা পাতায় পুরো গাইড পড়ুন।</p>
       </div>
 
       <div class="guides reveal">
@@ -928,11 +930,12 @@
           <div class="g-body"><div class="g-content">
             <p data-en="An FC (Foreign Currency) or NFCD account is a foreign-currency account for expatriates at a bank in Bangladesh. Buying dollar bonds, receiving profit and sending money back abroad all become easier with it.">FC (Foreign Currency) বা NFCD অ্যাকাউন্ট হলো বাংলাদেশের ব্যাংকে প্রবাসীদের বৈদেশিক মুদ্রায় রাখা অ্যাকাউন্ট। ডলার বন্ড কেনা, মুনাফা নেওয়া আর টাকা আবার বিদেশে ফেরত নেওয়া, সবকিছু এই অ্যাকাউন্ট দিয়ে সহজ হয়।</p>
             <ol>
-              <li data-en="Apply at any Authorised Dealer (AD) bank branch in Bangladesh, or online with many banks.">বাংলাদেশের যেকোনো অনুমোদিত ডিলার (AD) ব্যাংকের শাখায় বা অনেক ব্যাংকের ক্ষেত্রে অনলাইনে আবেদন করুন।</li>
+              <li data-en="Apply at any Authorised Dealer (AD) bank branch in Bangladesh; some banks also take applications online or through their overseas branches.">বাংলাদেশের যেকোনো অনুমোদিত ডিলার (AD) ব্যাংকের শাখায় আবেদন করুন; কিছু ব্যাংক অনলাইনে বা বিদেশি শাখার মাধ্যমেও আবেদন নেয়।</li>
               <li data-en="You need: a valid passport, visa or work permit, a photo and your nominee's details.">লাগবে: বৈধ পাসপোর্ট, ভিসা/ওয়ার্ক পারমিট, ছবি ও নমিনির তথ্য।</li>
               <li data-en="Send money from abroad through legal channels (a bank or exchange house) and deposit it into the account.">বিদেশ থেকে বৈধ পথে (ব্যাংক বা এক্সচেঞ্জ হাউস) টাকা পাঠিয়ে অ্যাকাউন্টে জমা দিন।</li>
             </ol>
             <div class="tip" data-en="Sending money through legal channels earns the government incentive and keeps proof of your income. Avoid hundi.">বৈধ পথে টাকা পাঠালে সরকারি প্রণোদনা পাওয়া যায় এবং আপনার আয়ের প্রমাণও থাকে। হুন্ডি এড়িয়ে চলুন।</div>
+            <p class="full-guide"><a class="text-link" href="/guides/nfcd-account" data-en-href="/en/guides/nfcd-account" data-en="Read the full guide">পুরো গাইড পড়ুন</a></p>
           </div></div>
         </details>
 
@@ -952,6 +955,7 @@
               <li data-en="Profit is paid every 6 months: in dollars for the Investment Bond, in taka for the Premium Bond.">মুনাফা প্রতি ৬ মাসে। Investment Bond এর মুনাফা ডলারে, Premium Bond এর মুনাফা টাকায়।</li>
             </ol>
             <div class="tip" data-en="Cash in before 1 year and you get no profit, so only invest money you won't need for at least 3 years.">১ বছরের আগে ভাঙালে কোনো মুনাফা পাবেন না, তাই অন্তত ৩ বছর লাগবে না এমন টাকাই রাখুন।</div>
+            <p class="full-guide"><a class="text-link" href="/guides/dollar-bond" data-en-href="/en/guides/dollar-bond" data-en="Read the full guide">পুরো গাইড পড়ুন</a></p>
           </div></div>
         </details>
 
@@ -971,24 +975,26 @@
               <li data-en="At maturity you can reinvest and hold it for up to 15 years in total.">মেয়াদ শেষে পুনর্বিনিয়োগ করে মোট ১৫ বছর পর্যন্ত রাখা যায়।</li>
             </ol>
             <div class="tip" data-en="Always add a nominee so your family can claim the money easily if anything happens to you.">নমিনি অবশ্যই দিন, যাতে আপনার অবর্তমানে পরিবার সহজে টাকা পায়।</div>
+            <p class="full-guide"><a class="text-link" href="/guides/wage-earner-bond" data-en-href="/en/guides/wage-earner-bond" data-en="Read the full guide">পুরো গাইড পড়ুন</a></p>
           </div></div>
         </details>
 
         <details class="g">
           <summary><span class="g-row">
             <span class="g-cat" data-en="Sanchayapatra">সঞ্চয়পত্র</span>
-            <span class="g-main"><span class="g-title" data-en="Buying Sanchayapatra in a family member's name">পরিবারের নামে সঞ্চয়পত্র কেনার সম্পূর্ণ গাইড</span><span class="g-desc" data-en="NID, TIN, online application">NID, TIN, অনলাইন আবেদন</span></span>
+            <span class="g-main"><span class="g-title" data-en="Buying Sanchayapatra in a family member's name">পরিবারের নামে সঞ্চয়পত্র কেনার সম্পূর্ণ গাইড</span><span class="g-desc" data-en="NID, the 10% tax, online application">NID, ১০% কর, অনলাইন আবেদন</span></span>
             <span class="g-time" data-en="5 min">৫ মিনিট</span>
             <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
           </span></summary>
           <div class="g-body"><div class="g-content">
             <ol>
               <li data-en="The buyer (for example a parent or spouse) needs: a National ID (NID), a bank account in their own name, a photo and nominee details.">ক্রেতা (যেমন বাবা-মা বা স্ত্রী) এর লাগবে: জাতীয় পরিচয়পত্র (NID), নিজের নামে ব্যাংক অ্যাকাউন্ট, ছবি ও নমিনির তথ্য।</li>
-              <li data-en="For purchases above 5 lakh taka, a TIN and proof of filing an income tax return are required.">৫ লাখ টাকার বেশি কিনলে TIN ও আয়কর রিটার্ন জমার প্রমাণ লাগে।</li>
+              <li data-en="For purchases above 10 lakh taka, proof of a filed income tax return (PSR) is required.">১০ লাখ টাকার বেশি কিনলে আয়কর রিটার্ন জমার প্রমাণ (PSR) লাগে।</li>
               <li data-en="Apply online (e-Sanchayapatra) through a bank, post office or National Savings Bureau. Profit goes straight to the bank account.">ব্যাংক, ডাকঘর বা জাতীয় সঞ্চয় ব্যুরোতে অনলাইনে (ই-সঞ্চয়পত্র) আবেদন করা হয়; মুনাফা সরাসরি ব্যাংক অ্যাকাউন্টে আসে।</li>
               <li data-en="The Family Sanchayapatra can only be bought by women over 18, people with physical disabilities, and men and women over 65.">পরিবার সঞ্চয়পত্র শুধু ১৮ বছরের বেশি নারী, শারীরিক প্রতিবন্ধী এবং ৬৫ বছরের বেশি বয়সী নারী-পুরুষ কিনতে পারেন।</li>
             </ol>
             <div class="tip" data-en="Keeping each person's holding within 7.5 lakh taka gets you the higher rate.">একজনের নামে সব না কিনে সাড়ে ৭ লাখ টাকার মধ্যে রাখলে বেশি রেট পাবেন।</div>
+            <p class="full-guide"><a class="text-link" href="/guides/sanchayapatra-family" data-en-href="/en/guides/sanchayapatra-family" data-en="Read the full guide">পুরো গাইড পড়ুন</a></p>
           </div></div>
         </details>
 
@@ -1006,6 +1012,7 @@
               <li data-en="Legal channels earn the government incentive and give you proof of the money's source for buying bonds.">বৈধ পথে পাঠালে সরকারি প্রণোদনা মেলে এবং বন্ড কেনার জন্য টাকার উৎসের প্রমাণ থাকে।</li>
             </ul>
             <div class="tip" data-en="Sending larger amounts less often usually means lower total fees.">একবারে বড় অংকে পাঠালে মোট ফি সাধারণত কম পড়ে।</div>
+            <p class="full-guide"><a class="text-link" href="/guides/send-money-home" data-en-href="/en/guides/send-money-home" data-en="Read the full guide">পুরো গাইড পড়ুন</a></p>
           </div></div>
         </details>
 
@@ -1023,9 +1030,11 @@
               <li data-en="Always collect the receipt, certificate or online registration number.">রসিদ, সার্টিফিকেট বা অনলাইন রেজিস্ট্রেশন নম্বর অবশ্যই সংগ্রহ করুন।</li>
               <li data-en="Stay away from anyone tempting you with &quot;insider tips&quot; on the stock market.">শেয়ারবাজারে "ইনসাইডার টিপ" দিয়ে যারা লোভ দেখায়, তাদের এড়িয়ে চলুন।</li>
             </ul>
+            <p class="full-guide"><a class="text-link" href="/guides/investment-scams" data-en-href="/en/guides/investment-scams" data-en="Read the full guide">পুরো গাইড পড়ুন</a></p>
           </div></div>
         </details>
       </div>
+      <p class="all-guides"><a class="text-link" href="/guides" data-en-href="/en/guides" data-en="See all guides on their own pages">সব গাইড আলাদা পাতায় দেখুন</a></p>
     </div>
   </section>
 
@@ -1038,7 +1047,7 @@
       <div class="faq reveal">
         <details>
           <summary><span data-en="Can expatriates buy Sanchayapatra themselves?">প্রবাসীরা কি নিজে সঞ্চয়পত্র কিনতে পারেন?</span><span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="a"><p data-en="Regular Sanchayapatra requires a Bangladeshi NID, a local bank account, and a TIN above 5 lakh taka. That's why many expatriates buy it in a family member's name. The Wage Earner Bond and dollar bonds, made for expatriates, can be bought directly with your passport, and they are tax-free.">সাধারণ সঞ্চয়পত্র কিনতে বাংলাদেশের NID, দেশি ব্যাংক অ্যাকাউন্ট এবং ৫ লাখ টাকার বেশি হলে TIN লাগে। তাই অনেক প্রবাসী পরিবারের সদস্যের নামে কেনেন। প্রবাসীদের জন্য তৈরি ওয়েজ আর্নার বন্ড ও ডলার বন্ড সরাসরি পাসপোর্ট দিয়েই কেনা যায়, আর এগুলো করমুক্ত।</p></div>
+          <div class="a"><p data-en="Regular Sanchayapatra requires a Bangladeshi NID and a local bank account, plus proof of a tax return above 10 lakh taka. That's why many expatriates buy it in a family member's name. The Wage Earner Bond and dollar bonds, made for expatriates, can be bought directly with your passport, and they are tax-free.">সাধারণ সঞ্চয়পত্র কিনতে বাংলাদেশের NID ও দেশি ব্যাংক অ্যাকাউন্ট লাগে, আর ১০ লাখ টাকার বেশি হলে আয়কর রিটার্নের প্রমাণ। তাই অনেক প্রবাসী পরিবারের সদস্যের নামে কেনেন। প্রবাসীদের জন্য তৈরি ওয়েজ আর্নার বন্ড ও ডলার বন্ড সরাসরি পাসপোর্ট দিয়েই কেনা যায়, আর এগুলো করমুক্ত।</p></div>
         </details>
         <details>
           <summary><span data-en="Premium Bond or Investment Bond: which is better?">Premium Bond আর Investment Bond: কোনটা ভালো?</span><span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
@@ -1054,7 +1063,7 @@
         </details>
         <details>
           <summary><span data-en="What happens if I withdraw before maturity?">মেয়াদের আগে টাকা তুলতে চাইলে কী হবে?</span><span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="a"><p data-en="You can cash in, but at a lower rate. Dollar bonds pay no profit if cashed within 1 year, and a reduced rate after 1 year. For Sanchayapatra and WEDB, profit already received is adjusted if you cash in early.">ভাঙানো যায়, তবে রেট কমে যায়। ডলার বন্ড ১ বছরের আগে ভাঙালে কোনো মুনাফা নেই; ১ বছর পর ভাঙালে কম হারে মুনাফা। সঞ্চয়পত্র ও WEDB এর ক্ষেত্রেও আগে ভাঙালে আগে পাওয়া মুনাফা থেকে সমন্বয় করা হয়।</p></div>
+          <div class="a"><p data-en="You can cash in, but at a lower rate. Dollar bonds pay no profit if cashed within 1 year, and a reduced rate after that. The Wage Earner Bond pays no profit within 6 months. For Sanchayapatra, profit already received is adjusted if you cash in early.">ভাঙানো যায়, তবে রেট কমে যায়। ডলার বন্ড ১ বছরের আগে ভাঙালে কোনো মুনাফা নেই; এর পরে ভাঙালে কম হারে মুনাফা। ওয়েজ আর্নার বন্ডে ৬ মাসের আগে কোনো মুনাফা নেই। সঞ্চয়পত্রে আগে ভাঙালে আগে পাওয়া মুনাফা থেকে সমন্বয় করা হয়।</p></div>
         </details>
         <details>
           <summary><span data-en="Does Shombol take or invest my money?">Shombol কি আমার টাকা নেয় বা বিনিয়োগ করে দেয়?</span><span class="plus" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
@@ -1105,7 +1114,7 @@
         </dl>
       </div>
       <div class="figures reveal">
-        <div><div class="v num">$35.5B</div><div class="l" data-en="Record remittance, FY 2025-26">রেকর্ড রেমিট্যান্স, অর্থবছর ২০২৫-২৬</div></div>
+        <div><div class="v num">$35.56B</div><div class="l" data-en="Record remittance, FY 2025-26">রেকর্ড রেমিট্যান্স, অর্থবছর ২০২৫-২৬</div></div>
         <div><div class="v" data-en="10M+">১ কোটি+</div><div class="l" data-en="Bangladeshis abroad">প্রবাসী বাংলাদেশি</div></div>
         <div><div class="v" data-en="100%">১০০%</div><div class="l" data-en="Government guaranteed">সরকারি গ্যারান্টি</div></div>
       </div>
@@ -1121,7 +1130,8 @@
         <li><a href="https://www.shomoyeralo.com/news/370539" target="_blank" rel="noopener" data-en="Finance Ministry notice (Shomoyer Alo)">অর্থ মন্ত্রণালয়ের প্রজ্ঞাপন (সময়ের আলো)</a></li>
         <li><a href="https://www.thedailystar.net/business/news/govt-hikes-interest-rates-dollar-bonds-3519191" target="_blank" rel="noopener" data-en="Dollar bond rates revised (The Daily Star)">ডলার বন্ডের সুদহার পুনর্নির্ধারণ (The Daily Star)</a></li>
         <li><a href="https://www.tbsnews.net/bangladesh/nrbs-can-now-purchase-any-amount-wage-earner-bonds-ird-lifts-investment-cap-983311" target="_blank" rel="noopener" data-en="Wage Earner Bond cap removed (The Business Standard)">ওয়েজ আর্নার বন্ডের সীমা প্রত্যাহার (The Business Standard)</a></li>
-        <li><a href="https://en.prothomalo.com/business/local/2m49au9o3r" target="_blank" rel="noopener" data-en="Record $35.56 billion remittance, FY 2025-26 (Prothom Alo)">রেকর্ড $৩৫.৫৬ বিলিয়ন রেমিট্যান্স, অর্থবছর ২০২৫-২৬ (Prothom Alo)</a></li>
+        <li><a href="https://thefinancialexpress.com.bd/economy/remittance-inflows-hit-historic-high-of-3556b-in-fy26" target="_blank" rel="noopener" data-en="Record $35.56 billion remittance, FY 2025-26 (The Financial Express)">রেকর্ড $৩৫.৫৬ বিলিয়ন রেমিট্যান্স, অর্থবছর ২০২৫-২৬ (The Financial Express)</a></li>
+        <li><a href="https://en.prothomalo.com/business/local/73pkxu6ic5" target="_blank" rel="noopener" data-en="10% advance tax on savings certificate profit (Prothom Alo, June 2026)">সঞ্চয়পত্রের মুনাফায় ১০% অগ্রিম কর (Prothom Alo, জুন ২০২৬)</a></li>
         <li><a href="https://nationalsavings.gov.bd/" target="_blank" rel="noopener" data-en="National Savings Directorate (official website)">জাতীয় সঞ্চয় অধিদপ্তর (সরকারি ওয়েবসাইট)</a></li>
       </ul>
     </div>
@@ -1176,7 +1186,7 @@
     };
     var T = {
       bn: {
-        tax: 'উৎসে কর বাদ দিয়ে দেখান', taxFree: 'এই বিনিয়োগ করমুক্ত',
+        tax: 'উৎসে ১০% অগ্রিম কর বাদ দিয়ে দেখান', taxFree: 'এই বিনিয়োগ করমুক্ত',
         outLabel: function (y) { return y + ' বছর পর মেয়াদ শেষে আপনার মোট'; },
         principal: 'মূলধন', profit: 'মোট মুনাফা (কর বাদে)', rate: 'প্রযোজ্য হার',
         monthly: 'প্রতি মাসে মুনাফা', quarterly: 'প্রতি ৩ মাসে মুনাফা', half: 'প্রতি ৬ মাসে মুনাফা',
@@ -1190,7 +1200,7 @@
         thanks: 'ধন্যবাদ! নতুন ট্যাবে আপনার সাবস্ক্রিপশন নিশ্চিত করুন।'
       },
       en: {
-        tax: 'Show after tax deducted at source', taxFree: 'This investment is tax-free',
+        tax: 'Show after the 10% advance tax at source', taxFree: 'This investment is tax-free',
         outLabel: function (y) { return 'Your total at maturity after ' + y + ' years'; },
         principal: 'Principal', profit: 'Total profit (after tax)', rate: 'Rate applied',
         monthly: 'Profit every month', quarterly: 'Profit every 3 months', half: 'Profit every 6 months',
@@ -1207,7 +1217,7 @@
 
     /* ---------- Products (single source of truth for the calculator) ----------
        tiers: [upperLimit, annualRate%]; simple profit paid perYear times (0 = at maturity).
-       tax 'sanchay' = 5% if principal up to 5 lakh, else 10%. */
+       tax 'sanchay' = 10% advance tax on profit (Finance Act 2026, from 1 July 2026). */
     var P = {
       wedb:    { name: { bn: 'ওয়েজ আর্নার বন্ড', en: 'Wage Earner Bond' }, cur: 'BDT', years: 5, perYear: 2, tax: 'none',
                  tiers: [[1500000, 12], [3000000, 11], [5000000, 10], [Infinity, 9]],
@@ -1312,7 +1322,7 @@
       var fdRate = parseFloat(fdInput.value) || 0;
       var rate = rateFor(p, amt);
       var gross = amt * rate / 100 * p.years;
-      var taxPct = (p.tax === 'sanchay' && taxToggle.checked) ? (amt <= 500000 ? 5 : 10) : 0;
+      var taxPct = (p.tax === 'sanchay' && taxToggle.checked) ? 10 : 0;
       var profit = gross * (1 - taxPct / 100);
       var total = amt + profit;
       var fdTotal = amt;
@@ -1366,6 +1376,8 @@
     Array.prototype.forEach.call(tNodes, function (n) { n.setAttribute('data-bn', n.innerHTML); });
     var lNodes = document.querySelectorAll('[data-en-l]');
     Array.prototype.forEach.call(lNodes, function (n) { n.setAttribute('data-bn-l', n.getAttribute('data-l')); });
+    var hrefNodes = document.querySelectorAll('[data-en-href]');
+    Array.prototype.forEach.call(hrefNodes, function (n) { n.setAttribute('data-bn-href', n.getAttribute('href')); });
     var phNodes = document.querySelectorAll('[data-en-ph]');
     Array.prototype.forEach.call(phNodes, function (n) { n.setAttribute('data-bn-ph', n.getAttribute('placeholder')); });
 
@@ -1376,6 +1388,7 @@
       Array.prototype.forEach.call(tNodes, function (n) { n.innerHTML = n.getAttribute(en ? 'data-en' : 'data-bn'); });
       Array.prototype.forEach.call(lNodes, function (n) { n.setAttribute('data-l', n.getAttribute(en ? 'data-en-l' : 'data-bn-l')); });
       Array.prototype.forEach.call(phNodes, function (n) { n.setAttribute('placeholder', n.getAttribute(en ? 'data-en-ph' : 'data-bn-ph')); });
+      Array.prototype.forEach.call(hrefNodes, function (n) { n.setAttribute('href', n.getAttribute(en ? 'data-en-href' : 'data-bn-href')); });
       document.title = META[l].title;
       document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === l ? 'true' : 'false'); });
       buildSeg();
