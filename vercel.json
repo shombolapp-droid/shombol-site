@@ -59,6 +59,22 @@
     {
       "source": "/en/guides/:slug",
       "destination": "/en-guide-:slug.html"
+    },
+    {
+      "source": "/rates",
+      "destination": "/rates.html"
+    },
+    {
+      "source": "/en/rates",
+      "destination": "/en-rates.html"
+    },
+    {
+      "source": "/rates/:slug",
+      "destination": "/rate-:slug.html"
+    },
+    {
+      "source": "/en/rates/:slug",
+      "destination": "/en-rate-:slug.html"
     }
   ],
   "trailingSlash": false
