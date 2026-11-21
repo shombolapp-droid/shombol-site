@@ -91,6 +91,14 @@
     {
       "source": "/en/countries/:slug",
       "destination": "/en-country-:slug.html"
+    },
+    {
+      "source": "/tools/:slug",
+      "destination": "/tool-:slug.html"
+    },
+    {
+      "source": "/en/tools/:slug",
+      "destination": "/en-tool-:slug.html"
     }
   ],
   "trailingSlash": false
